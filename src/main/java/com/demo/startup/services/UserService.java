@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface DemoService {
+public interface UserService {
 
 	public List<?> getName(String name);
 

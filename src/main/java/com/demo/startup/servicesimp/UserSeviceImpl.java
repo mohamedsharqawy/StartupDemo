@@ -6,14 +6,14 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.demo.startup.repositories.DemoEntityRepository;
-import com.demo.startup.services.DemoService;
+import com.demo.startup.repositories.UserEntityRepository;
+import com.demo.startup.services.UserService;
 
 @Service
-public class DemoSeviceImpl implements DemoService {
+public class UserSeviceImpl implements UserService {
 
 	@Autowired
-	private DemoEntityRepository demoEntityRepository;
+	private UserEntityRepository userEntityRepository;
 
 	@Override
 	public List<?> getDescription(String description) {
@@ -21,7 +21,7 @@ public class DemoSeviceImpl implements DemoService {
 
 		List<?> result = new ArrayList();
 
-		result = demoEntityRepository.findByDescription(description);
+		result = userEntityRepository.findByDescription(description);
 
 		return result;
 	}
@@ -32,7 +32,7 @@ public class DemoSeviceImpl implements DemoService {
 
 		List<?> result = new ArrayList();
 
-		result = demoEntityRepository.findByName(name);
+		result = userEntityRepository.findByName(name);
 
 		return result;
 	}

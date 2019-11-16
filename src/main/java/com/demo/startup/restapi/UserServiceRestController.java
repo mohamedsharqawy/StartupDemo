@@ -7,13 +7,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.startup.services.DemoService;
+import com.demo.startup.services.UserService;
 
 @RestController
-public class DemoServiceRestController {
+public class UserServiceRestController {
 
 	@Autowired
-	private DemoService demoService;
+	private UserService demoService;
 
 	@GetMapping(path = "/getbyname/{name}")
 	public List<?> getbyname(@PathVariable(name = "name", required = true) String name) {
